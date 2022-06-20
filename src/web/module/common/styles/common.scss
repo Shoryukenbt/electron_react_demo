@@ -1,0 +1,45 @@
+@import './variable.scss';
+@import './reset.scss';
+@import './animate.css';
+@import './form.scss';
+@import './reset_element.scss';
+@import './upload.scss';
+@import './reset_sweetalert.scss';
+body {
+    // font: $font-primary;
+    background-color: $color-bg-primary;
+    min-width: 1366px;
+}
+#root {
+    height: 100%;
+}
+.is-danger {
+    color: #f00;
+}
+.is-accent {
+    background-color: $color-accent;
+    color: $color-font-bk;
+}
+.float-right {
+    float: right;
+}
+.no-padding {
+    padding: 0;
+}
+.display-none {
+    display: none;
+}
+.line-actions {
+    display: inline-block;
+    & > * {
+        margin-left: 1em;
+    }
+}
+.preview-img {
+    height: 100%;
+    width: 100%;
+    margin-right: 1rem;
+}
+.text-left {
+    text-align: left;
+}

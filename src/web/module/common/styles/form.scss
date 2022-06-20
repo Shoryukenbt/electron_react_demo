@@ -1,0 +1,250 @@
+@import './variable.scss';
+.ant-select input:focus {
+  border: none !important;
+}
+.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+  background: rgba(26, 188, 156, 1);
+  color: #fff;
+}
+.ant-input:hover {
+  border-color: rgba(26, 188, 156, 1);
+}
+.ant-select-auto-complete.ant-select .ant-input:focus,
+.ant-select-auto-complete.ant-select .ant-input:hover {
+  border-color: rgba(26, 188, 156, 1);
+  border-right-width: 1px !important;
+}
+.ant-select-open .ant-select-selection {
+  border-color: rgba(26, 188, 156, 1);
+}
+input, select, textarea {
+  margin: 0;
+  height: 36px;
+  width: 220px;
+  padding: 3px 10px;
+  // padding: calc(0.625em - 1px) calc(0.375em - 1px);
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 400;
+  border: 1px solid #bfcbd9;
+  border-radius: 4px;
+  outline-style: none;
+  box-sizing: border-box;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  background-color: transparent;
+  &:focus {
+      border: 2px solid $color-accent !important;
+      line-height: calc(1.5em-4px);
+      padding: calc(0.625em - 2px) calc(0.375em - 2px);
+  }
+  &.small {
+    width: 12.5rem;
+  }
+  &.big {
+    width: 25rem;
+  }
+  &.large {
+    width: 31.25rem;
+  }
+  &.full {
+    width: 100%;
+  }
+  &.is-danger {
+    border-color: #f00;
+  }
+}
+.child-input-no-border {
+  input {
+    border: none !important;
+  }
+}
+.child-input-only-bottom {
+  input {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0;
+  }
+}
+textarea {
+  height: 10rem;
+}
+::placeholder {
+  color:#bfcbd9;
+}
+select {
+  appearance: none;
+}
+.select {
+  &::after {
+    display: block;
+    content: "";
+    height: 0.625em;
+    width: 0.625em;
+    border: 3px solid #3273dc;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0.96875em;
+    margin-top: -0.4375em;
+    right: 0.45em;
+    transform-origin: center;
+    transform: rotate(-45deg); 
+    background: #fff;   
+  }
+}
+textarea {
+  vertical-align: top;
+}
+button {
+  position: relative;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 2.5px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  &:hover {
+      opacity: 0.7;
+  }
+  &:active {
+      opacity: 1;
+  }
+  &:disabled {
+      background-color: $color-disable;
+  }
+  &.loading {
+      &::after {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+  }
+  &.link {
+      color: $color-accent;
+      background: transparent;
+  }
+  &.is-linellae {
+    background: transparent;
+    border: 1px solid #bfcbd9;
+    &:active, &:hover, &.active {
+      border-color: $color-accent;
+    }
+  }
+}
+a {
+  color: $color-accent;
+  cursor: pointer;
+  &:hover {
+    color: $green-dark;
+  }
+}
+.form-actions {
+  margin: 3rem 0; 
+  margin-left: 30%;
+  line-height: 2.5rem;
+  // text-align: center;
+}
+.field-label {
+  display: inline-block;
+  padding-right: 1.5rem;
+  padding-top: 0.375em;
+  width: 30%;
+  text-align: right;
+  vertical-align: top;
+  .label {
+    font-weight: 700;
+    &.required {
+      &::before {
+        display: inline;
+        content:'* ';
+        color: #f00;
+      }
+    }
+  }
+}
+.field-body {
+  display: inline-block;
+  position: relative;
+  width: 70%;
+  .text-val {
+    padding-top: 0.375em;
+  }
+  .help {
+    display: block;
+    margin-top: 0.25em;
+    font-size: 0.75em;
+    word-wrap: break-word;
+  }
+}
+.field {
+  &.small {
+    .el-input__inner, .el-date-editor.el-input {
+      width: 220px;
+    }
+  }
+  .el-input__inner, .el-date-editor.el-input {
+    width: 300px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
+.field-horizontal{
+  display: inline-block;
+  width: 33.33%;
+  margin: 0.75rem 0;
+  .el-input__inner, .el-date-editor.el-input {
+    width: 220px;
+  }
+  &.x2 {
+    width: 66.66%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .field-horizontal{
+    width: 25%;
+    &.x2 {
+      width: 50%;
+    }
+  }
+}
+.couple-input {
+  input {
+    width: 85px;
+  }
+  span {
+    position: relative;
+    top: 18px;
+    display: inline-block;
+    height: 36px;
+    width: 26px;
+    margin: 0 12px;
+    border-top: 1px solid #bfcbd9;
+    vertical-align: top;
+  }
+}
+.col-avg-6 {
+  margin-bottom: 25px;
+  th,td {
+    width: 16.666666%;
+  }
+  &.text-left {
+    th,td {
+      padding: 10px 0 10px 25px;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import './variable.scss';
+.swal-modal{
+  padding-top: 60px;
+  border-radius: 0;
+  .swal-title {
+      position: absolute;
+      top: 0px;
+      margin: 0;
+      width: 100%;
+      padding: 0 20px;
+      text-align: left;
+      font-size: 16px;
+      line-height: 3em;
+      box-shadow: none;
+      border-bottom: 1px solid $color-disable;
+      background-color: $color-bg-block;
+      color: $color-primary;
+      // border-radius: 5px 5px 0 0;
+  }
+  .swal-text {
+    text-align: center;
+    h5 {
+      line-height: 2em;
+    }
+  }
+  .swal-button--cancel {
+    background: transparent;
+    color: $color-accent;
+    border: 1px solid $color-accent;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .swal-button--confirm {
+    background: $color-accent;
+    &:hover {
+      background: $color-accent;
+      opacity: 0.75;
+    }
+  }
+  .swal-button:focus, .swal-button--cancel:focus, .swal-button--danger:focus {
+    box-shadow: none;
+  }
+}

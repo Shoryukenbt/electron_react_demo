@@ -1,0 +1,18 @@
+@import './color.scss';
+@import './size.scss';
+$bg-main: $grey-green;
+$bg-accent: $green;
+$color-primary: $black;
+$color-secondary: $black-light;
+$color-disable: $grey;
+$color-font-bk: $white;
+$color-accent: $green;
+$color-bg-primary: $grey-green;
+$color-bg-block: $grey2;
+$color-bg-thead: $grey-blue-light;
+$color-bg-content: $white;
+$font-primary: $size-big 'Microsoft YaHei';
+$font-small: $size-small "Microsoft YaHei";
+$font-title-big: 400 $size-big "Microsoft YaHei";
+$font-title-bigger: 400 $size-bigger 'Arial Normal','Arial';
+$block-title-size: $size-small;

@@ -1,0 +1,21 @@
+@import './variable.scss';
+.el-input__inner, .el-date-editor.el-input {
+  width: 220px;
+}
+.el-input-group--append {
+  width: 320px;
+  .el-select {
+    width: 100px;
+    input {
+      width: 100px;
+    }
+  }
+}
+.el-input {
+  i.is-reverse + input {
+    border: 2px solid $color-accent !important;
+  }
+}
+.app-panel-header .el-cascader__label {
+  line-height: 48px;
+}
