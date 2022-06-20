@@ -11,14 +11,21 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.jsx?$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: [
                     'babel-loader'
                 ]
             },
             {
-                test: /.scss|sass$/,
+                test: /\.css$/,
+                use: [
+                    CssExtract.loader,
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.(scss|sass)$/,
                 use: [
                     CssExtract.loader,
                     'css-loader',
@@ -26,7 +33,7 @@ module.exports = {
                 ]
             },
             {
-                test: /.png|jpe?g|gif$/,
+                test: /\.(png)|(jpe?g)|(gif)$/,
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[contenthash][ext]'

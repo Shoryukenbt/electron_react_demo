@@ -1,18 +1,20 @@
 {
   "name": "electron_react_demo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "electron+react demo",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron src/main.js",
+    "start": "electron-forge start",
     "dev": "webpack serve --config .build/webpack.dev.js",
-    "build": "webpack --config .build/webpack.prod.js"
+    "build": "webpack --config .build/webpack.prod.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shoryukenbt/electron_react_demo.git"
   },
-  "author": "",
+  "author": "yang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Shoryukenbt/electron_react_demo/issues"
@@ -22,7 +24,9 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "electron": "^19.0.4",
+    "antd": "^4.21.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.18.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0"
@@ -31,8 +35,14 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@electron-forge/cli": "^6.0.0-beta.64",
+    "@electron-forge/maker-deb": "^6.0.0-beta.64",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.64",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
+    "@electron-forge/maker-zip": "^6.0.0-beta.64",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "electron": "^19.0.4",
     "html-webpack-plugin": "^5.5.0",
     "less-loader": "^11.0.0",
     "mini-css-extract-plugin": "^2.6.1",
@@ -43,5 +53,32 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron_react_demo"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
