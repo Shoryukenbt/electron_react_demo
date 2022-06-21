@@ -8,6 +8,7 @@ node.js >= 14
 ### 构建exe
 ```
  npm install
+ npm run build
  npm run make
 ```
 
