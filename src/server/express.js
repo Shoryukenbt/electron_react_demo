@@ -55,5 +55,3 @@ exports.runServer = function() {
     });
 }
 
-exports.runServer();
-
