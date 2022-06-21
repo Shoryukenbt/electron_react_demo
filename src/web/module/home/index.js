@@ -49,10 +49,9 @@ export function Home() {
             <Sider className="app-menus">
             <Menu
                 onClick={onClick}
-                defaultSelectedKeys={['user']}
+                defaultSelectedKeys={['users']}
                 mode="inline"
                 theme="dark"
-                inlineCollapsed={false}
                 items={menus}
             />
             </Sider>

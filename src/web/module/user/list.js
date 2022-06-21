@@ -54,10 +54,10 @@ export function UserList() {
                     marginBottom: 16,
                 }}
             >
-                <Button onClick={() => { setModalVisible(true) }}>添加</Button>
+                <Button type="primary" onClick={() => { setModalVisible(true) }}>添加</Button>
             </Space>
             {
-                users ? <Table dataSource={users}>
+                users ? <Table dataSource={users} rowKey="id">
                     <Column title="账号" dataIndex="account" key="account" />
                     <Column title="创建时间" dataIndex="createTime" key="createTime" />
                     <Column title="操作" key="action" render={
