@@ -1,1 +1,1 @@
-npm run make
+npm install && npm run build && npm run make
